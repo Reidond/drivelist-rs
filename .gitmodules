@@ -1,0 +1,4 @@
+[submodule "src-drivelist"]
+	path = src-drivelist
+	url = https://github.com/balena-io-modules/drivelist
+	branch = master
