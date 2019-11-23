@@ -1,7 +1,12 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
+#![allow(non_upper_case_globals)]
+#![allow(non_camel_case_types)]
+#![allow(non_snake_case)]
+
+use libc::*;
+
+include!("./bindings.rs");
+
+pub fn list() {
+  let storage_devices: std_vector = unsafe { Drivelist_ListStorageDevices() };
+  println!("{:?}", storage_devices);
 }

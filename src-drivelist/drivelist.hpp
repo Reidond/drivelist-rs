@@ -17,7 +17,7 @@
 #ifndef SRC_DRIVELIST_HPP_
 #define SRC_DRIVELIST_HPP_
 
-#include <nan.h>
+// #include <nan.h>
 #include <string>
 #include <vector>
 
@@ -55,10 +55,10 @@ struct DeviceDescriptor {
 };
 
 std::vector<DeviceDescriptor> ListStorageDevices();
-v8::Local<v8::Object> PackDriveDescriptor(const DeviceDescriptor *instance);
+// v8::Local<v8::Object> PackDriveDescriptor(const DeviceDescriptor *instance);
 
 }  // namespace Drivelist
 
-NAN_METHOD(list);
+// NAN_METHOD(list);
 
 #endif  // SRC_DRIVELIST_HPP_
