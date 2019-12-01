@@ -1,12 +1,14 @@
-#![allow(non_upper_case_globals)]
-#![allow(non_camel_case_types)]
-#![allow(non_snake_case)]
+#[cfg(target_os = "windows")]
+pub async fn list() {
+  println!("{}", list_windows::list(1));
+}
 
-use libc::*;
+#[cfg(target_os = "linux")]
+pub async fn list() {
+  println!("{}", list_linux::list(1, 2));
+}
 
-include!("./bindings.rs");
-
-pub fn list() {
-  let storage_devices: std_vector = unsafe { Drivelist_ListStorageDevices() };
-  println!("{:?}", storage_devices);
+#[cfg(target_os = "darwin")]
+pub async fn list() {
+  println!("{}", list_darwin::list(1, 2, 3));
 }
