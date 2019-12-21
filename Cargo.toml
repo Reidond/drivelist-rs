@@ -20,4 +20,5 @@ members = [
     "list-windows",
     "list-linux",
     "list-darwin",
+    "device-descriptor"
 ]

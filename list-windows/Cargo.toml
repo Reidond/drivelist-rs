@@ -7,4 +7,9 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-winapi = "0.3.8"
+widestring = "0.4.0"
+winapi = { version = "0.3.8", features = ["knownfolders", "setupapi", "winnt", "shlobj", "winerror", "winbase", "errhandlingapi"] }
+device_descriptor = { path = "../device-descriptor" }
+
+[build-dependencies]
+bindgen = "0.52.0"

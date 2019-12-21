@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-#ifndef SRC_DRIVELIST_HPP_
-#define SRC_DRIVELIST_HPP_
+#ifndef LIB_DRIVELIST_HPP_
+#define LIB_DRIVELIST_HPP_
 
-// #include <nan.h>
 #include <string>
 #include <vector>
 
@@ -44,21 +43,18 @@ struct DeviceDescriptor {
   std::vector<std::string> mountpoints;
   std::vector<std::string> mountpointLabels;
   bool isReadOnly;  // Device is read-only
-  bool isSystem;  // Device is a system drive
-  bool isVirtual;  // Device is a virtual storage device
-  bool isRemovable;  // Device is removable from the running system
-  bool isCard;  // Device is an SD-card
-  bool isSCSI;  // Connected via the Small Computer System Interface (SCSI)
-  bool isUSB;  // Connected via Universal Serial Bus (USB)
-  bool isUAS;  // Connected via the USB Attached SCSI (UAS)
+  bool isSystem;    // Device is a system drive
+  bool isVirtual;   // Device is a virtual storage device
+  bool isRemovable; // Device is removable from the running system
+  bool isCard;      // Device is an SD-card
+  bool isSCSI;      // Connected via the Small Computer System Interface (SCSI)
+  bool isUSB;       // Connected via Universal Serial Bus (USB)
+  bool isUAS;       // Connected via the USB Attached SCSI (UAS)
   bool isUASNull;
 };
 
 std::vector<DeviceDescriptor> ListStorageDevices();
-// v8::Local<v8::Object> PackDriveDescriptor(const DeviceDescriptor *instance);
 
-}  // namespace Drivelist
+} // namespace Drivelist
 
-// NAN_METHOD(list);
-
-#endif  // SRC_DRIVELIST_HPP_
+#endif // LIB_DRIVELIST_HPP_
