@@ -1,6 +1,6 @@
 #[cfg(target_os = "windows")]
 pub async fn list() {
-  println!("{}", list_windows::list(1));
+  println!("{:?}", list_windows::list());
 }
 
 #[cfg(target_os = "linux")]

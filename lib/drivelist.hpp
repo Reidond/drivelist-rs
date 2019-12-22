@@ -20,8 +20,6 @@
 #include <string>
 #include <vector>
 
-namespace Drivelist {
-
 struct MountPoint {
   std::string path;
 };
@@ -54,7 +52,5 @@ struct DeviceDescriptor {
 };
 
 std::vector<DeviceDescriptor> ListStorageDevices();
-
-} // namespace Drivelist
 
 #endif // LIB_DRIVELIST_HPP_

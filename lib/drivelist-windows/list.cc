@@ -35,8 +35,6 @@
 #include <windows.h>
 #include <winioctl.h>
 
-namespace Drivelist {
-
 char *WCharToUtf8(const wchar_t *wstr) {
   char *str = NULL;
   size_t size = WideCharToMultiByte(CP_UTF8, 0, wstr, -1, NULL, 0, NULL, NULL);
@@ -679,5 +677,3 @@ std::vector<DeviceDescriptor> ListStorageDevices() {
 
   return deviceList;
 }
-
-} // namespace Drivelist

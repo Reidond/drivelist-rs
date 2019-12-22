@@ -22,8 +22,6 @@
 #include <set>
 #include <string>
 
-namespace Drivelist {
-
 // The <ntddstor.h>, and <usbiodef.h> headers include the following
 // device interface GUIDs we're interested in;
 // @see
@@ -113,7 +111,5 @@ const std::set<std::string> VHD_HARDWARE_IDS{
 
 const GUID KNOWN_FOLDER_IDS[]{FOLDERID_Windows, FOLDERID_Profile,
                               FOLDERID_ProgramFiles, FOLDERID_ProgramFilesX86};
-
-} // namespace Drivelist
 
 #endif // LIB_WINDOWS_LIST_HPP_

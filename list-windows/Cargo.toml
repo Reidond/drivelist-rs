@@ -10,6 +10,3 @@ edition = "2018"
 widestring = "0.4.0"
 winapi = { version = "0.3.8", features = ["knownfolders", "setupapi", "winnt", "shlobj", "winerror", "winbase", "errhandlingapi"] }
 device_descriptor = { path = "../device-descriptor" }
-
-[build-dependencies]
-bindgen = "0.52.0"
